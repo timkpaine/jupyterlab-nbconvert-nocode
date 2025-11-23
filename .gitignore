@@ -157,3 +157,7 @@ jupyterlab_nbconvert_nocode/labextension
 
 # Rust
 target
+
+# Artifacts
+jupyterlab_nbconvert_nocode/tests/*.html
+jupyterlab_nbconvert_nocode/tests/*.pdf

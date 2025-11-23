@@ -52,11 +52,14 @@ develop = [
     "twine",
     "uv",
     "wheel",
+    # Test deps
+    "superstore",
 ]
 
 [project.entry-points."nbconvert.exporters"]
 pdf_nocode = "jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.exporters:PDFHideCodeExporter"
 html_nocode = "jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.exporters:HTMLHideCodeExporter"
+webpdf_nocode = "jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.exporters:WebPDFHideCodeExporter"
 
 [project.scripts]
 
