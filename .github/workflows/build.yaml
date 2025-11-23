@@ -40,7 +40,12 @@ jobs:
         version: ${{ matrix.python-version }}
 
     - name: Install dependencies
-      run: make develop
+      run: |
+        make develop
+        uv pip install nbconvert[webpdf]
+        sudo apt install pandoc
+        sudo apt install texlive-xetex
+        playwright install chromium
 
     - name: Lint
       run: make lint
