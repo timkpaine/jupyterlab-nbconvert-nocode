@@ -2,7 +2,7 @@
 requires = [
     "hatchling",
 ]
-build-backend="hatchling.build"
+build-backend = "hatchling.build"
 
 [project]
 name = "jupyterlab-nbconvert-nocode"
@@ -45,14 +45,14 @@ dependencies = [
 develop = [
     "build",
     "bump-my-version",
-    "check-manifest",
-    "codespell>=2.4,<2.5",
+    "check-dist",
+    "codespell",
     "hatchling",
-    "mdformat>=0.7.22,<1.1",
+    "mdformat",
     "mdformat-tables>=1",
     "pytest",
     "pytest-cov",
-    "ruff>=0.9,<0.15",
+    "ruff",
     "twine",
     "ty",
     "uv",
@@ -88,18 +88,12 @@ filename = "pyproject.toml"
 search = 'version = "{current_version}"'
 replace = 'version = "{new_version}"'
 
-[tool.check-manifest]
-ignore = [
-    ".copier-answers.yaml",
-    "Makefile",
-    "docs/**/*",
-]
-
 [tool.coverage.run]
 branch = true
 omit = [
     "jupyterlab_nbconvert_nocode/tests/integration/",
 ]
+
 [tool.coverage.report]
 exclude_also = [
     "raise NotImplementedError",

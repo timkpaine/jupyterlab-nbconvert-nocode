@@ -141,14 +141,12 @@ js/node_modules
 js/test-results
 js/playwright-report
 js/*.tgz
-jupyterlab_nbconvert_nocode/extension
 
 # Jupyter
 .ipynb_checkpoints
 .autoversion
 Untitled*.ipynb
-!jupyterlab_nbconvert_nocode/extension/jupyterlab_nbconvert_nocode.json
-!jupyterlab_nbconvert_nocode/extension/install.json
+jupyterlab_nbconvert_nocode/extension
 jupyterlab_nbconvert_nocode/nbextension
 jupyterlab_nbconvert_nocode/labextension
 
@@ -158,6 +156,12 @@ jupyterlab_nbconvert_nocode/labextension
 # Rust
 target
 
+<<<<<<< before updating
 # Artifacts
 jupyterlab_nbconvert_nocode/tests/*.html
 jupyterlab_nbconvert_nocode/tests/*.pdf
+=======
+# Hydra
+outputs/
+multirun/
+>>>>>>> after updating
