@@ -142,20 +142,15 @@ jupyterlab_nbconvert_nocode/labextension
 # Rust
 target
 
-<<<<<<< before updating
-# Artifacts
-jupyterlab_nbconvert_nocode/tests/*.html
-jupyterlab_nbconvert_nocode/tests/*.pdf
-=======
 # Hydra
 outputs/
 multirun/
-<<<<<<< before updating
->>>>>>> after updating
-=======
 
 # AI
 ROADMAP.md
 AGENTS.md
 .github/hooks/sdlc.json
->>>>>>> after updating
+
+# Artifacts
+jupyterlab_nbconvert_nocode/tests/*.html
+jupyterlab_nbconvert_nocode/tests/*.pdf
