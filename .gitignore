@@ -151,6 +151,7 @@ multirun/
 ROADMAP.md
 AGENTS.md
 .github/hooks/sdlc.json
+.superpowers
 
 # Artifacts
 jupyterlab_nbconvert_nocode/tests/*.html
