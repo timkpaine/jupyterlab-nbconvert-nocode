@@ -151,11 +151,8 @@ multirun/
 ROADMAP.md
 AGENTS.md
 .github/hooks/sdlc.json
-<<<<<<< before updating
+.superpowers
 
 # Artifacts
 jupyterlab_nbconvert_nocode/tests/*.html
 jupyterlab_nbconvert_nocode/tests/*.pdf
-=======
-.superpowers
->>>>>>> after updating
