@@ -33,9 +33,11 @@ jobs:
         python-version: ["3.10"]
 
     steps:
-    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        persist-credentials: false
 
-    - uses: actions-ext/python/setup@main
+    - uses: actions-ext/python/setup@6e1b91a408ea89f49bc8aff8724f83826f7b5446
       with:
         version: ${{ matrix.python-version }}
 
@@ -61,7 +63,7 @@ jobs:
       run: make coverage
 
     - name: Upload test results (Python)
-      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: test-results-${{ matrix.os }}-${{ matrix.python-version }}
         path: junit.xml
@@ -80,15 +82,15 @@ jobs:
     - name: Make dist
       run: make dist
 
-    - uses: actions-ext/python/test-wheel@main
+    - uses: actions-ext/python/test-wheel@6e1b91a408ea89f49bc8aff8724f83826f7b5446
       with:
         module: jupyterlab_nbconvert_nocode
 
-    - uses: actions-ext/python/test-sdist@main
+    - uses: actions-ext/python/test-sdist@6e1b91a408ea89f49bc8aff8724f83826f7b5446
       with:
         module: jupyterlab_nbconvert_nocode
 
-    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: dist-${{matrix.os}}
         path: dist
