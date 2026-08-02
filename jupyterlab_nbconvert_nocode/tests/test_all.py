@@ -1,8 +1,4 @@
-<<<<<<< before updating
 from pathlib import Path
-=======
-from jupyterlab_nbconvert_nocode import *
->>>>>>> after updating
 
 from nbconvert.nbconvertapp import NbConvertApp
 
