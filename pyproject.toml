@@ -59,6 +59,8 @@ develop = [
     "uv",
     "wheel",
     # Test deps
+    "matplotlib",
+    "pandas",
     "superstore",
 ]
 
