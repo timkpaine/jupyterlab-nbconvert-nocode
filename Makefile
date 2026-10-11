@@ -25,16 +25,16 @@ lint-py:  ## lint python with ruff
 	python -m ruff format --check jupyterlab_nbconvert_nocode
 
 lint-docs:  ## lint docs with mdformat and codespell
-	python -m mdformat --check README.md 
-	python -m codespell_lib README.md 
+	python -m mdformat --check README.md $(wildcard docs/src) 
+	python -m codespell_lib README.md $(wildcard docs/src) 
 
 fix-py:  ## autoformat python code with ruff
 	python -m ruff check --fix jupyterlab_nbconvert_nocode
 	python -m ruff format jupyterlab_nbconvert_nocode
 
 fix-docs:  ## autoformat docs with mdformat and codespell
-	python -m mdformat README.md 
-	python -m codespell_lib --write README.md 
+	python -m mdformat README.md $(wildcard docs/src) 
+	python -m codespell_lib --write README.md $(wildcard docs/src) 
 
 lint: lint-py lint-docs  ## run all linters
 lints: lint
@@ -52,7 +52,7 @@ check-dist:  ## check python sdist and wheel with check-dist
 check-types:  ## check python types with ty
 	ty check --python $$(which python)
 
-checks: check-dist
+checks: check-dist check-types
 
 # Alias
 check: checks
